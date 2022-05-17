@@ -19,7 +19,7 @@
 <script>
     // your JavaScript goes here!
     console.log("Hello,world")  
-</script>
+</script>+
 
 # console.log() : es el comando para imprimir algo en la consola
 
@@ -525,3 +525,101 @@ alert(+apples + +oranges); // 5
 Desde el punto de vista de un matemático, la abundancia de ventajas puede parecer extraña. Pero desde el punto de vista de un programador, no hay nada especial: las ventajas unarias se aplican primero, convierten cadenas en números y luego las sumas binarias.
 
 ¿Por qué se aplican ventajas unarias a los valores anteriores a los binarios? Como veremos, eso se debe a su mayor precedencia .
+
+# Plantillas literales (plantillas de cadenas)
+
+Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.
+
+### Descripcion
+
+1. se delimitan con comillas invertidas **(`hola`)**
+
+2. pueden contener marcadores identificados por el signo de dolary envueltos en llaves **${ sumar,dividir,restar etc(expresion)}**.
+
+3. La función por defecto sencillamente concatena las partes para formar una única cadena de caracteres. Si hay una expresión antes de la plantilla literal (aquí indicada mediante etiqueta), se le conoce como "plantilla etiquetada". En este caso, la expresión de etiqueta (típicamente una función) es llamada con la plantilla literal como parámetro, que luego puede ser manipulada antes de ser devuelta.
+
+4. En caso de querer escapar una comilla o tilde invertida en una plantilla literal, se debe poner una barra invertida (\) antes de la comilla o tilde invertida.
+
+- ejemplo
+
+```javascript
+const theorem = "Pythagorean theorem";
+
+const a = 5;
+const b = 8;
+const h = 9.43;
+
+const myString = `Using , ${theorem} , we can work out that that
+     if the two shortest sides of a right-angled triangle have lengths 
+     of ${a} and ${b}, the length of the hypotenuse is ${h}.`;
+```
+
+# JavaScript String Methods 
+https://www.w3schools.com/js/js_string_methods.asp
+
+# Metodos y propiedades en cadenas
+los valores primitivos **('hola')** no pueden tener metodos ni propiedades por que no son objetos.
+
+Pero javascript si los trata como objetos al ejecutar metodod y propiedades.
+
+
+# Longitud de cadena
+
+la **length** devuelve la longitud de una cadena
+
+```javascript
+  let txt = "qwerttyyut6h";
+  let length = txt.length; 
+  console.log(length)
+```
+# extraccion de partes de string
+
+hay 3 metodos:
+
+* slice(stasrt, end)
+* susbstring(start,end)
+* substr(start, length)
+
+# segmento de string
+
+**slice()** extrae una parte de la dadena y devuelve la extaida en una nueva string
+el metodo toma dos parametros : la inicial y la final.
+
+```javascript
+let str = "Apple, Banana, Kiwi";
+let part = str.slice(7,13);
+console.log(lenght)
+```
+> ## Nota
+>
+> javascript cuentaposiciones desde cero
+>
+>  la primera posicion es 0.
+>
+>  la segunda posiciion es 1. 
+
+# Subcadena de cadena de JavaScript ()
+
+substring() es similar a slice().
+
+la diferecia es que Substring() trata los valores inferiores a 0 como cero.
+
+ej:
+```javascript
+let str = "apple, Bannana, kiwi";
+let part = str.substring(7,13);
+```
+
+
+# Substr de cadena de JavaScript ()
+
+substr()es similar a slice().
+
+la diferencia es que el el segundo numero especifica el tamano de la cadena extraida.
+
+ej:
+```javascript
+let str = "Apple, Banana, Kiwi";
+let part = str.substr(7, 6);
+```
+

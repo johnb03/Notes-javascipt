@@ -172,6 +172,17 @@ Pero con JavaScript, los métodos y propiedades también están disponibles para
 
 **length** esta propiedad devuelve la longitud de cualquier cadena.
 
+- ej:
+
+```javascript
+var myString = "bluebells";
+
+console.log(myString.length);
+
+("colocara 9 en la consola.");
+/* "bluebells" */
+```
+
 ## Extracción de partes de string
 
 Hay tres metodos para la extraccion de cadenas
